@@ -52,7 +52,7 @@ body { margin-bottom:30px; }
 
 
 .options .nav{ height:34px;}
-.options .nav li{ height:33px; width:172px; line-height:33px; text-align:center; border:1px solid #e5e5e5; border-bottom:none; border-radius:6px 6px 0 0; position:relative;}
+.options .nav li{ height:33px; width:172px; line-height:33px; text-align:center; border:1px solid #e5e5e5; border-bottom:none; border-radius:6px 6px 0 0; position:relative; cursor:pointer;}
 .options .nav .active{ height:34px; line-height:34px; background:#ffffff; z-index:2;}
 .options .con{ width:348px; border:1px solid #e5e5e5; border-radius:0 0 6px 6px; position:relative;}
 
@@ -98,8 +98,8 @@ body { margin-bottom:30px; }
 
 #search .bar{ width:958px; height:64px; background:#e21c01; border:1px solid #c40d0e; position:absolute; top:16px; left:-1px; border-radius:5px; box-shadow:2px 3px 2px #d2d2d2;}
 #search .search_nav{ position:absolute; left:226px; top:-11px;}
-#search .search_nav li{ width:78px; height:25px; border:1px solid #f8d0bf; border-bottom:none; border-radius:5px 5px 0 0; margin-right:1px; float:left; text-align:center; line-height:25px; font-size:14px; color:#000; cursor:pointer; box-shadow:1px 0 2px rgba(0,0,0,0.15);}
-#search .search_nav .active{ height:27px; border:1px solid #c40d0e; border-bottom:none;background:#e21c01; color:#fbfbfb; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.25);}
+#search .search_nav li{ width:78px; height:26px; border:1px solid #f8d0bf; border-bottom:none; border-radius:5px 5px 0 0; margin-right:1px; float:left; text-align:center; line-height:25px; font-size:14px; color:#000; cursor:pointer; box-shadow:1px 0 2px rgba(0,0,0,0.15);}
+#search .search_nav .active{ height:27px; border:1px solid #c40d0e;border-bottom:none;background:#e21c01; color:#fbfbfb; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.25); box-shadow:none;}
 #search img{ position:absolute; left:32px; top:-3px; z-index:2;}
 #search .search_form{ position:absolute; left:226px; top:36px;}
 #search .search_form .text{ height:22px; width:380px; padding:0 12px; border:none; background:#fff1ef; border-radius:3px; box-shadow:inset 1px 1px 2px #ca8c83; margin-right:10px; font-size:12px; color:#ea7a7a;}
@@ -259,10 +259,57 @@ body { margin-bottom:30px; }
 .bbs_list .one span{ color:#fff; font-size:14px; position:absolute; left:58px; top:5px;}
 .bbs_list .one em{ color:#fff; position:absolute; left:41px; top:31px; }
 
+.title{ width:348px; height:70px;font-weight:normal; position:absolute; left:0; top:0;}
+.title span{ display:block; color:#ea2b31; font-family:arial; font-size:12px; position:absolute; top:19px; left:23px;}
+.title strong{ display:block; color:#333333; font-size:24px; font-weight:normal; position:absolute; top:30px; left:23px;}
+.title em{ display:block; color:#ec1c16; font-size:36px; position:absolute; top:14px; left:127px;}
+
+.activity,.recommend{ height:498px;}
+.activity .title{ background:url(../img/title_bg.png) no-repeat right 0 top -70px; }
+.recommend .title{ background:url(../img/title_bg.png) no-repeat right 0 top 0; }
+
+.activity_con .info{ height:120px; background:url(../img/title_bg.png) no-repeat 0 -140px; position:absolute; top:70px; left:15px;}
+.activity_con .info .img{ position:absolute; top:10px; left:8px;}
+.activity_con .info .text{ width:214px; position:absolute; top:19px; left:104px;}
+.activity_con .info .text em{ display:inline-block; width:26px; height:25px; background:url(../img/activity_bg.png); text-align:center; line-height:25px; color:#cf1812;}
+.activity_con .info .text strong{color:#333333; font-size:12px; position:absolute; top:6px; left:61px;}
+.activity_con .info .text p{ color:#999999; position:absolute; top:33px; left:2px;}
+.activity_con .clendar{ width:301px; position:absolute; top:190px; left:25px;}
+.activity_con .clendar h3{ height:34px; background:url(../img/clendar_bg.png) repeat-x; text-align:center; word-spacing:16px;}
+.activity_con .clendar span{ font-size:12px; font-family:arial;}
+.activity_con .clendar ol{}
+.activity_con .clendar li{ width:40px; height:40px; background:#ededed; float:left; margin:0 3px 2px 0; line-height:40px; text-align:center; color:#666; font-weight:bold; position:relative;}
+.activity_con .clendar .normal{background:#f8f8f8; color:#cfcfcf;}
+.activity_con .clendar .active{ width:36px; height:36px; border:2px solid #d30408; position:absolute; top:0; left:0;}
+.activity_con .clendar .img{ width:40px; height:40px; position:absolute;top:0; left:0;}
+
+.clendar_info{ width:294px; height:84px; padding:10px; border:1px solid #c0c0c0; background:#fff; position:absolute; top:10px; left:310px; box-shadow:4px 4px 0 rgba(0,0,0,0.2); display:none;}
+.clendar_info img{ width:80px; height:80px; border:2px solid #dbdbdb; float:left;}
+.clendar_info .text{ width:200px; float:right;}
+.clendar_info .text h4{ font-size:12px; color:#333;}
+.clendar_info .text strong{ color:#ccc; font-size:16px;}
+.clendar_info .text p{ color:#999; line-height:20px;}
+.clendar_info span{ width:8px; height:14px; position:absolute; top:40px; left:-8px; background:url(../img/clender_info_bg%27.png);}
+
+.recommend_ad{ width:318px; height:180px; background:#f8f8f8; border-radius:4px; position:relative; top:70px;}
+.recommend_ad .big{ width:223px; height:133px; border:1px solid #fff; position:relative; top:12px; left:12px;}
+.recommend_ad .big img{ position:absolute; top:0; left:0; display:none;}
+.recommend_ad .big .active{ display:block;}
+.recommend_ad .small{ width:60px; height:135px; position:absolute; top:12px; right:12px;}
+.recommend_ad .small img{ width:54px; height:30px; border:3px solid #fff; margin-bottom:13px; cursor:pointer;}
+.recommend_ad .small .active{ border-color:#d6191d;}
+.recommend_ad a .active{ display:block;}
+.recommend_ad span{ position:absolute; display:none; left:14px; bottom:13px; color:#000;}
+.recommend_ad span:hover{ text-decoration:underline;}
+
+.recommend_info{ height:216px; width:318px; position:absolute; left:15px; bottom:16px;}
+.recommend_info li{ height:27px; line-height:27px;}
+.recommend_info a{padding-left:6px; color:#454545;}
+.recommend_info em{ float:right; padding-right:12px; color:#999999;}
+
 #footer ul{  position:absolute; left:206px; top:21px;}
 #footer li{ width:61px; height:12px; background:url(../img/footer_bg.png); float:left; padding-left:9px;}
 #footer li a{ line-height:12px; font-size:12px;color:#454545;}
 #footer li a:hover{ text-decoration:underline;}
 #footer div{width:413px; height:12px;  background:url(../img/footer.png); position:absolute; top:44px; left:280px;}
 #footer .no_bg{background:none;}
-
